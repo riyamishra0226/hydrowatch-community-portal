@@ -1,2 +1,1 @@
-SDG_HydroWatchCommunityPortal_RiyaMishra
 The primary goal of the HydroWatch Capstone Project is to build a crowd-sourced web application that addresses UN Sustainable Development Goal 6 (Clean Water and Sanitation) by bridging the communication gap between local citizens and municipal authorities regarding water infrastructure failures and quality crises.
