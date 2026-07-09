@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { registerSchema } from "../../validations/registerSchema";
+import { registerUser } from "../../api/authApi";
 
 function RegisterForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,10 +19,24 @@ function RegisterForm() {
     resolver: zodResolver(registerSchema),
   });
 
+  const navigate = useNavigate();
+
   const onSubmit = async (data) => {
-    console.log("Register Data:", data);
-    // Backend API will be connected here later
-  };
+  try {
+    const response = await registerUser({
+      name: data.name,
+      email: data.email,
+      password: data.password,
+    });
+
+    alert(response.data.message);
+
+    navigate("/login");
+
+  } catch (error) {
+    alert(error.response?.data?.message || "Registration failed");
+  }
+};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">

@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { loginSchema } from "../../validations/loginSchema";
+import { loginUser } from "../../api/authApi";
 
 function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -18,10 +20,18 @@ function LoginForm() {
   });
 
   const onSubmit = async (data) => {
-    console.log("Login Data:", data);
+  try {
+    const response = await loginUser(data);
 
-    // Backend API will be connected here later.
-  };
+    localStorage.setItem("token", response.data.token);
+
+    alert("Login Successful!");
+
+    navigate("/dashboard");
+  } catch (error) {
+    alert(error.response?.data?.message || "Login failed");
+  }
+};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
