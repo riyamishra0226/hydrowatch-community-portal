@@ -1,10 +1,15 @@
-function RegisterPage() {
+import AuthLayout from "../../components/auth/AuthLayout";
+import RegisterForm from "../../components/auth/RegisterForm";
+
+function Register() {
   return (
-    <div>
-      <h1>Register Page</h1>
-      <p>This page is under development.</p>
-    </div>
+    <AuthLayout
+      title="Create Account"
+      subtitle="Join the HydroWatch community."
+    >
+      <RegisterForm />
+    </AuthLayout>
   );
 }
 
-export default RegisterPage;
+export default Register;

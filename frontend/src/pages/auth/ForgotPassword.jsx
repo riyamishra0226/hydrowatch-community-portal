@@ -1,9 +1,14 @@
+import AuthLayout from "../../components/auth/AuthLayout";
+import ForgotPasswordForm from "../../components/auth/ForgotPasswordForm";
+
 function ForgotPassword() {
   return (
-    <div>
-      <h1>Forgot Password</h1>
-      <p>This page is under development.</p>
-    </div>
+    <AuthLayout
+      title="Forgot Password"
+      subtitle="Enter your email to receive a password reset link."
+    >
+      <ForgotPasswordForm />
+    </AuthLayout>
   );
 }
 

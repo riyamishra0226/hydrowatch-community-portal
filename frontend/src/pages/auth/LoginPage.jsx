@@ -1,15 +1,15 @@
 import AuthLayout from "../../components/auth/AuthLayout";
 import LoginForm from "../../components/auth/LoginForm";
 
-function Login() {
+function LoginPage() {
   return (
     <AuthLayout
       title="Welcome Back!"
-      subtitle="Login to continue your HydroWatch journey."
+      subtitle="Sign in to continue to HydroWatch."
     >
       <LoginForm />
     </AuthLayout>
   );
 }
 
-export default Login;
+export default LoginPage;

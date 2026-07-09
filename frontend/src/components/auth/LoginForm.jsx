@@ -1,38 +1,91 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+import { loginSchema } from "../../validations/loginSchema";
 
 function LoginForm() {
-  return (
-    <form className="space-y-6">
+  const [showPassword, setShowPassword] = useState(false);
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm({
+    resolver: zodResolver(loginSchema),
+  });
+
+  const onSubmit = async (data) => {
+    console.log("Login Data:", data);
+
+    // Backend API will be connected here later.
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+
+      {/* Email */}
       <div>
-        <label className="block mb-2 font-medium">
-          Email
+        <label className="block text-sm font-semibold text-gray-700 mb-2">
+          Email Address
         </label>
 
         <input
           type="email"
           placeholder="Enter your email"
-          className="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-sky-500"
+          {...register("email")}
+          className="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-sky-300 outline-none"
         />
+
+        {errors.email && (
+          <p className="text-red-500 text-sm mt-2">
+            {errors.email.message}
+          </p>
+        )}
       </div>
 
+      {/* Password */}
       <div>
-        <label className="block mb-2 font-medium">
+
+        <label className="block text-sm font-semibold text-gray-700 mb-2">
           Password
         </label>
 
-        <input
-          type="password"
-          placeholder="Enter your password"
-          className="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-sky-500"
-        />
+        <div className="relative">
+
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Enter your password"
+            {...register("password")}
+            className="w-full border rounded-xl px-4 py-3 pr-12 focus:ring-2 focus:ring-sky-300 outline-none"
+          />
+
+          <button
+            type="button"
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute right-4 top-1/2 -translate-y-1/2"
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </button>
+
+        </div>
+
+        {errors.password && (
+          <p className="text-red-500 text-sm mt-2">
+            {errors.password.message}
+          </p>
+        )}
+
       </div>
 
-      <div className="flex justify-between text-sm">
+      {/* Remember Me */}
+      <div className="flex justify-between items-center text-sm">
 
         <label className="flex items-center gap-2">
           <input type="checkbox" />
-          Remember me
+          Remember Me
         </label>
 
         <Link
@@ -44,10 +97,14 @@ function LoginForm() {
 
       </div>
 
+      {/* Button */}
+
       <button
-        className="w-full bg-sky-600 text-white py-3 rounded-xl hover:bg-sky-700 transition"
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full bg-sky-600 text-white py-3 rounded-xl hover:bg-sky-700 transition disabled:bg-sky-300"
       >
-        Login
+        {isSubmitting ? "Logging in..." : "Login"}
       </button>
 
       <p className="text-center text-gray-600">
