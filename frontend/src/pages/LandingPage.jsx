@@ -1,5 +1,15 @@
+import Navbar from "../components/layout/Navbar";
+
 function LandingPage() {
-  return <h1>Landing Page</h1>;
+  return (
+    <>
+      <Navbar />
+
+      <h1 style={{ textAlign: "center", marginTop: "100px" }}>
+        Landing Page
+      </h1>
+    </>
+  );
 }
 
 export default LandingPage;
