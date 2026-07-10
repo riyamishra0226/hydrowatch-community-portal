@@ -1,9 +1,18 @@
-import heroImage from "../../assets/images/hero.svg";
+import heroImage from "../../assets/images/hydro-hero.png";
 
 function Hero() {
   return (
-    <section className="bg-gradient-to-r from-sky-50 to-white py-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <section
+       className="min-h-[110vh] bg-gradient-to-r from-sky-50 to-white"
+       style={{
+       backgroundImage: `url(${heroImage})`,
+       backgroundRepeat: "no-repeat",
+       backgroundPosition: "right center",
+       backgroundSize: "cover",
+      }}
+      >
+      <div className="w-full pl-8 pr-8 lg:pl-12 lg:pr-8">
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -78,12 +87,7 @@ function Hero() {
           </div>
 
           {/* Right Side */}
-          <div className="flex justify-center">
-            <img
-              src={heroImage}
-              alt="HydroWatch Hero"
-              className="w-full max-w-lg"
-            />
+          <div className="flex justify-center items-center">
           </div>
 
         </div>
