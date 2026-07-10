@@ -1,4 +1,5 @@
 import Report from "../models/Report.js";
+import Campaign from "../models/Campaign.js";
 import User from "../models/User.js";
 
 export const createReport = async (req, res) => {
@@ -95,6 +96,33 @@ export const getLeaderboard = async (req, res) => {
 
     res.status(200).json(users);
   } catch (error) {
+    res.status(500).json({
+      message: "Server Error",
+    });
+  }
+};
+
+
+export const getDashboardStats = async (req, res) => {
+  try {
+    const { userId } = req.params;
+
+    const reportCount = await Report.countDocuments({ user: userId });
+
+    const user = await User.findById(userId);
+
+    const campaignsJoined = await Campaign.countDocuments({
+      participants: userId,
+    });
+
+    res.status(200).json({
+      reports: reportCount,
+      points: user.points,
+      campaigns: campaignsJoined,
+    });
+  } catch (error) {
+    console.error(error);
+
     res.status(500).json({
       message: "Server Error",
     });

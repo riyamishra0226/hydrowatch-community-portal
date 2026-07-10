@@ -13,3 +13,7 @@ export const deleteReport = (id) => {
 };  
 
 export const getCampaigns = () => API.get("/campaigns");
+
+export const getDashboardStats = (userId) => {
+  return API.get(`/reports/dashboard/${userId}`);
+};
