@@ -1,5 +1,12 @@
+import DashboardLayout from "../components/layout/DashboardLayout";
+import ReportForm from "../components/report/ReportForm";
+
 function ReportIssuePage() {
-  return <h1>Report Issue Page</h1>;
+  return (
+    <DashboardLayout>
+      <ReportForm />
+    </DashboardLayout>
+  );
 }
 
 export default ReportIssuePage;

@@ -11,6 +11,7 @@ import LeaderboardPage from "./pages/LeaderboardPage";
 import ProfilePage from "./pages/ProfilePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import MyReportsPage from "./pages/MyReportsPage";
 
 function App() {
   return (
@@ -63,6 +64,15 @@ function App() {
         element={
           <ProtectedRoute>
             <ProfilePage />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/my-reports"
+        element={
+          <ProtectedRoute>
+            <MyReportsPage />
           </ProtectedRoute>
         }
       />
