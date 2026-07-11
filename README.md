@@ -175,7 +175,7 @@ VITE_API_URL=http://localhost:5000
 
 <h3>Campaigns</h3>
 <p align="center">
-  <img src="screenshot/ss_campaigns.png" width="850">
+  <img src="screenshots/ss_campaigns.png" width="850">
 </p>
 
 <h3>Profile</h3>
