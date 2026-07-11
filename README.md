@@ -200,12 +200,11 @@ GitHub: https://github.com/riyamishra0226
 
 ---
 
-# 📜 License
+## 📜 License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+This project is licensed under the **MIT License**.
 
----
-
+See the [LICENSE](LICENSE) file for more information.
 <div align="center">
 
 ### ⭐ If you found this project helpful, please give it a Star!
