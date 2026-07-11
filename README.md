@@ -146,17 +146,42 @@ VITE_API_URL=http://localhost:5000
 
 ---
 
-# 📸 Screenshots
+<h2>📸 Project Screenshots</h2>
 
-Add your screenshots here.
+<h3>Home Page</h3>
+<p align="center">
+  <img src="screenshots/ss_homepage.png" width="850">
+</p>
 
-- Home Page
-- Login
-- Dashboard
-- Report Issue
-- Leaderboard
-- Campaigns
-- Profile
+<h3>Login Page</h3>
+<p align="center">
+  <img src="screenshots/ss_login.png" width="850">
+</p>
+
+<h3>Dashboard</h3>
+<p align="center">
+  <img src="screenshots/ss_dashboard.png" width="850">
+</p>
+
+<h3>Report Issue</h3>
+<p align="center">
+  <img src="screenshots/ss_Report_Issue.png" width="850">
+</p>
+
+<h3>Leaderboard</h3>
+<p align="center">
+  <img src="screenshots/ss_leaderboard.png" width="850">
+</p>
+
+<h3>Campaigns</h3>
+<p align="center">
+  <img src="screenshot/ss_campaigns.png" width="850">
+</p>
+
+<h3>Profile</h3>
+<p align="center">
+  <img src="screenshots/ss_profile.png" width="850">
+</p>
 
 ---
 
