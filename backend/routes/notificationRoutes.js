@@ -1,0 +1,10 @@
+import express from "express";
+import { protect } from "../middleware/authMiddleware.js";
+import { validateObjectId } from "../middleware/securityMiddleware.js";
+import { getNotifications, getUnreadNotificationCount, markNotificationRead, markAllNotificationsRead } from "../controllers/notificationController.js";
+const router = express.Router();
+router.get("/", protect, getNotifications);
+router.get("/unread-count", protect, getUnreadNotificationCount);
+router.patch("/read-all", protect, markAllNotificationsRead);
+router.patch("/:id/read", protect, validateObjectId("id"), markNotificationRead);
+export default router;

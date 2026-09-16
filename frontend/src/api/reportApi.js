@@ -1,0 +1,27 @@
+import API from "./authApi";
+export const createReport = (data) => API.post("/reports", data);
+export const updateReport = (id, data) => API.patch(`/reports/${id}`, data);
+export const getMyReports = (userId) => API.get(`/reports/user/${userId}`);
+export const deleteReport = (id) => API.delete(`/reports/${id}`);
+export const getCampaigns = () => API.get("/campaigns");
+export const getManageCampaigns = () => API.get("/campaigns/manage");
+export const verifyCampaign = (id) => API.post(`/campaigns/${id}/verify`);
+export const verifyCampaignParticipation = (campaignId, userId) => API.post(`/campaigns/${campaignId}/verify-participation/${userId}`);
+export const joinCampaign = (id) => API.post(`/campaigns/${id}/join`);
+export const getDashboardStats = (userId) => API.get(`/reports/dashboard/${userId}`);
+export const getLeaderboard = () => API.get("/reports/leaderboard");
+export const getAdminStats = () => API.get("/reports/admin/stats");
+export const getAdminReports = (params = {}) => API.get("/reports/admin", { params });
+export const updateReportStatus = (id, data) => API.patch(`/reports/${id}/status`, data);
+export const assignReport = (id, userId) => API.patch(`/reports/${id}/assign`, { userId });
+export const getAdminUsers = () => API.get("/auth/admin/users");
+export const createCampaign = (data) => API.post("/campaigns", data);
+export const updateCampaign = (id, data) => API.put(`/campaigns/${id}`, data);
+export const deleteCampaign = (id) => API.delete(`/campaigns/${id}`);
+export const getCampaignStats = () => API.get("/campaigns/admin/stats");
+export const getNotifications = () => API.get("/notifications");
+export const getUnreadNotificationCount = () => API.get("/notifications/unread-count");
+export const markNotificationRead = (id) => API.patch(`/notifications/${id}/read`);
+export const markAllNotificationsRead = () => API.patch("/notifications/read-all");
+
+export const getMyRewards = () => API.get("/rewards/me");
