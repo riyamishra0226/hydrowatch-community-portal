@@ -775,7 +775,6 @@ https://hydrowatch-community-portal.vercel.app/
 
 https://hydrowatch-backend.onrender.com/
 
-> Deployment URLs may change depending on the hosting configuration.
 
 ---
 
