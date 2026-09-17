@@ -1,87 +1,361 @@
-# 💧 HydroWatch Community Portal
+💧 HydroWatch – Smart Community Water Management Platform
 
 <div align="center">
 
-### 🌍 Empowering Communities to Report, Track & Protect Water Resources
+A full-stack MERN platform for community-based water-issue reporting, monitoring and participation.
 
-A full-stack **MERN** application that enables citizens to report water-related issues, participate in environmental campaigns, and contribute to sustainable water resource management.
 
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Vercel](https://img.shields.io/badge/Frontend-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Render](https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/riyamishra0226/hydrowatch-community-portal?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/riyamishra0226/hydrowatch-community-portal?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/riyamishra0226/hydrowatch-community-portal?style=for-the-badge)
+
+
+
+
+
+
 
 </div>
 
----
+📌 Overview
 
-# 📖 Overview
+HydroWatch is a full-stack web application designed to provide a structured digital workflow for reporting, tracking and managing community water-related issues.
 
-HydroWatch Community Portal is a full-stack MERN application that encourages citizens to report water-related issues, participate in environmental campaigns, and contribute to sustainable water resource management.
+Instead of relying only on informal complaints through calls, messages or disconnected records, HydroWatch provides a centralized platform where community members can submit an issue with supporting information, location and evidence, while authorized administrators can review and manage the report lifecycle.
 
-The platform enables users to:
+The platform also extends beyond issue reporting with volunteer management, community campaigns, notifications, contribution rewards, leaderboard functionality, interactive maps and administrative analytics.
 
-- 💧 Report water-related issues
-- 🏆 Earn contribution points
-- 📊 View community leaderboard
-- 🌱 Participate in awareness campaigns
-- 👤 Manage their profile securely
+The project is developed as an academic project for B.Tech Computer Science & Engineering, 7th Semester, Academic Session 2026–27.
 
-This project aligns with **United Nations Sustainable Development Goal (SDG) 6 – Clean Water and Sanitation**.
+🎯 Project Objectives
 
----
+Provide centralized reporting of local water-related problems.
 
-# 🚀 Live Demo
+Capture structured issue information including category, severity, description and location.
 
-**Frontend:** https://hydrowatch-community-portal.vercel.app/
+Support image/evidence attachment with reports.
 
-**Backend:** https://hydrowatch-backend.onrender.com/
+Provide an interactive geographic view of reported issues.
 
----
+Track reports through a controlled administrative workflow.
 
-# ✨ Features
+Separate user, volunteer and administrator capabilities using role-based access control.
 
-- 🔐 Secure User Authentication (JWT)
-- 👤 User Registration & Login
-- 💧 Water Issue Reporting
-- 📊 Community Dashboard
-- 🏆 Leaderboard Based on Contribution Points
-- 🌱 Environmental Campaigns
-- 👤 User Profile
-- 📱 Responsive UI
+Provide a controlled volunteer application and campaign-management workflow.
 
----
+Notify users about relevant report and campaign events.
 
-# 🛠 Tech Stack
+Encourage legitimate community participation through verified rewards and a leaderboard.
 
-| Category | Technologies |
-|----------|--------------|
-| Frontend | React, Vite, Tailwind CSS, React Router, Axios |
-| Backend | Node.js, Express.js |
-| Database | MongoDB Atlas, Mongoose |
-| Authentication | JWT, bcrypt |
-| Validation | React Hook Form, Zod |
-| Deployment | Vercel, Render |
+Provide database-driven administrative analytics.
 
----
+✨ Key Features
 
-# 📂 Project Structure
+🔐 Authentication & Authorization
 
-```text
+User registration and login
+
+JWT-based authentication
+
+Password hashing with bcrypt
+
+Protected routes
+
+Role-based access control
+
+Roles: User, Volunteer, Admin
+
+Forgot-password workflow
+
+💧 Water-Issue Reporting
+
+Users can report issues such as:
+
+Water leakage
+
+Water pollution
+
+Pipeline damage
+
+Water wastage
+
+Other water-related problems
+
+Reports can contain:
+
+Issue category
+
+Severity
+
+Description
+
+Location
+
+GPS coordinates
+
+Supporting image
+
+📋 Report Management
+
+View submitted reports
+
+View individual report details
+
+Edit reports where permitted
+
+Delete reports according to authorization rules
+
+Administrative report management
+
+Report ownership checks
+
+Controlled status workflow
+
+Typical report lifecycle:
+
+Pending → Under Review → In Progress → Resolved
+
+🗺️ Interactive Map
+
+Location-aware report visualization
+
+Leaflet-based map interface
+
+OpenStreetMap map data
+
+Browser Geolocation API support
+
+Geographic visualization of valid report coordinates
+
+Severity-based report markers
+
+👨‍💼 Admin Dashboard
+
+Administrators can access management and monitoring functions including:
+
+Report management
+
+User management
+
+Volunteer application management
+
+Campaign verification
+
+Campaign management
+
+Operational analytics
+
+Geographic report monitoring
+
+👥 Volunteer Management
+
+Users can apply to become volunteers.
+
+Administrators can review applications.
+
+Applications can be approved or rejected.
+
+Approved users receive the volunteer role.
+
+Volunteer capabilities are separated from regular user and administrator capabilities.
+
+🌱 Campaign Management
+
+Volunteers and administrators can create campaigns.
+
+Volunteer-created campaigns can require administrator verification before publication.
+
+Administrators can verify and publish campaigns.
+
+Users can join verified campaigns.
+
+Campaign participation can be verified before rewards are issued.
+
+🔔 Notifications
+
+The application provides in-app notifications for relevant events such as:
+
+Report status changes
+
+Campaign-related activity
+
+Other supported account/system events
+
+🏆 Rewards & Leaderboard
+
+HydroWatch includes a contribution-based reward mechanism.
+
+Activity
+
+Reward
+
+Submit a report
+
++5 points
+
+Report moves to Under Review
+
++5 points
+
+Report becomes Resolved
+
++10 points
+
+Join a campaign
+
+0 until participation is verified
+
+Verified campaign participation
+
+Campaign-defined reward
+
+Administrative activity
+
+Excluded from community reward accumulation
+
+The community leaderboard focuses on eligible users and volunteers, excluding administrative activity.
+
+📊 Analytics
+
+The administrative dashboard uses current database records rather than fixed demo values to calculate operational statistics such as:
+
+Total reports
+
+Status distribution
+
+Category distribution
+
+Severity distribution
+
+Resolution rate
+
+Average resolution time
+
+Time-based report trends
+
+Charts are rendered using Recharts.
+
+👤 User Profile
+
+View account information
+
+View activity-related information
+
+Access supported rewards and community features
+
+🧱 System Architecture
+
+HydroWatch follows a three-layer client-server architecture:
+
+┌──────────────────────────────────────────────┐
+│              PRESENTATION LAYER              │
+│ React • Vite • Tailwind CSS • React Router  │
+│ Recharts • Leaflet                           │
+└──────────────────────┬───────────────────────┘
+                       │ REST API / HTTP
+┌──────────────────────▼───────────────────────┐
+│              APPLICATION LAYER               │
+│ Node.js • Express.js                         │
+│ JWT • RBAC • Business Logic • Validation    │
+│ Reports • Campaigns • Rewards • Analytics   │
+└──────────────────────┬───────────────────────┘
+                       │ Mongoose
+┌──────────────────────▼───────────────────────┐
+│                  DATA LAYER                  │
+│ MongoDB Atlas                                │
+│ Users • Reports • Campaigns • Rewards       │
+│ Notifications • Volunteer Applications      │
+└──────────────────────────────────────────────┘
+
+🛠️ Technology Stack
+
+Layer / Area
+
+Technologies
+
+Frontend
+
+React, Vite, Tailwind CSS
+
+Routing
+
+React Router
+
+HTTP Client
+
+Axios
+
+Forms
+
+React Hook Form
+
+Validation
+
+Zod
+
+UI / Icons
+
+React Icons, React Hot Toast
+
+Animation
+
+Framer Motion
+
+Charts
+
+Recharts
+
+Maps
+
+Leaflet, OpenStreetMap
+
+Backend
+
+Node.js, Express.js
+
+Database
+
+MongoDB Atlas, Mongoose
+
+Authentication
+
+JWT, bcryptjs
+
+Middleware
+
+CORS, cookie-parser, dotenv
+
+Version Control
+
+Git, GitHub
+
+Frontend Deployment
+
+Vercel
+
+Backend Deployment
+
+Render
+
+📂 Project Structure
+
 hydrowatch-community-portal/
+│
 ├── backend/
 │   ├── config/
 │   ├── controllers/
 │   ├── middleware/
 │   ├── models/
+│   │   ├── Campaign.js
+│   │   ├── Notification.js
+│   │   ├── Report.js
+│   │   ├── Reward.js
+│   │   ├── User.js
+│   │   └── VolunteerApplication.js
 │   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── campaignRoutes.js
+│   │   ├── notificationRoutes.js
+│   │   ├── reportRoutes.js
+│   │   └── rewardRoutes.js
 │   ├── package.json
 │   └── server.js
 │
@@ -91,7 +365,10 @@ hydrowatch-community-portal/
 │   │   ├── api/
 │   │   ├── assets/
 │   │   ├── components/
+│   │   ├── context/
+│   │   ├── hooks/
 │   │   ├── pages/
+│   │   ├── routes/
 │   │   ├── services/
 │   │   ├── validations/
 │   │   ├── App.jsx
@@ -99,142 +376,324 @@ hydrowatch-community-portal/
 │   ├── package.json
 │   └── vite.config.js
 │
+├── screenshots/
+├── LICENSE
 ├── README.md
-└── LICENSE
-```
+├── SECURITY_NOTES.md
+├── UPGRADE_NOTES.md
+└── .gitignore
 
----
+🚀 Getting Started
 
-# ⚙️ Installation
+1. Clone the repository
 
-```bash
 git clone https://github.com/riyamishra0226/hydrowatch-community-portal.git
 cd hydrowatch-community-portal
-```
 
-Install frontend:
+2. Install backend dependencies
 
-```bash
+cd backend
+npm install
+
+3. Configure backend environment variables
+
+Create backend/.env:
+
+PORT=5000
+MONGODB_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_long_random_secret_at_least_32_characters
+FRONTEND_URL=http://localhost:5173
+
+Keep .env files private. Never commit database credentials or JWT secrets to GitHub.
+
+4. Start the backend
+
+npm run dev
+
+The backend runs on the configured port, normally:
+
+http://localhost:5000
+
+5. Install frontend dependencies
+
+Open a second terminal:
+
 cd frontend
 npm install
-npm run dev
-```
 
-Install backend:
+6. Configure frontend environment
 
-```bash
-cd ../backend
-npm install
-npm run dev
-```
+Create frontend/.env if required by your deployment/local configuration:
 
-### Environment Variables
-
-Backend `.env`
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-```
-
-Frontend `.env`
-
-```env
 VITE_API_URL=http://localhost:5000
-```
 
----
+7. Start the frontend
 
-<h2>📸 Project Screenshots</h2>
+npm run dev
 
-<h3>Home Page</h3>
+The Vite development server will provide the local frontend URL, normally:
+
+http://localhost:5173
+
+🔌 Backend API Groups
+
+The Express backend exposes REST API groups under /api:
+
+/api/auth
+/api/reports
+/api/campaigns
+/api/notifications
+/api/rewards
+
+Protected operations require authentication, and administrative/volunteer operations are additionally restricted by role and authorization rules.
+
+🧪 Development & Testing
+
+Before deployment, verify at minimum:
+
+Registration and login
+
+Authentication persistence and logout
+
+Protected routes
+
+Role-based permissions
+
+Report creation and editing
+
+Image upload
+
+GPS/location handling
+
+Report status transitions
+
+Report deletion authorization
+
+Volunteer application workflow
+
+Campaign creation and verification
+
+Campaign participation verification
+
+Reward calculations
+
+Leaderboard filtering
+
+Notifications
+
+Map visualization
+
+Admin analytics
+
+For frontend linting:
+
+cd frontend
+npm run lint
+
+For a production frontend build:
+
+npm run build
+
+📸 Screenshots
+
+The repository contains screenshots in the screenshots/ directory.
+
+Home Page
+
 <p align="center">
-  <img src="screenshots/ss_homepage.png" width="850">
+  <img src="screenshots/ss_homepage.png" width="850" alt="HydroWatch Home Page">
 </p>
 
-<h3>Login Page</h3>
+Login
+
 <p align="center">
-  <img src="screenshots/ss_login.png" width="850">
+  <img src="screenshots/ss_login.png" width="850" alt="HydroWatch Login Page">
 </p>
 
-<h3>Dashboard</h3>
+Dashboard
+
 <p align="center">
-  <img src="screenshots/ss_dashboard.png" width="850">
+  <img src="screenshots/ss_dashboard.png" width="850" alt="HydroWatch Dashboard">
 </p>
 
-<h3>Report Issue</h3>
+Report Issue
+
 <p align="center">
-  <img src="screenshots/ss_Report_Issue.png" width="850">
+  <img src="screenshots/ss_Report_Issue.png" width="850" alt="HydroWatch Report Issue Page">
 </p>
 
-<h3>Leaderboard</h3>
+Campaigns
+
 <p align="center">
-  <img src="screenshots/ss_leaderboard.png" width="850">
+  <img src="screenshots/ss_campaigns.png" width="850" alt="HydroWatch Campaigns">
 </p>
 
-<h3>Campaigns</h3>
+Leaderboard
+
 <p align="center">
-  <img src="screenshots/ss_campaigns.png" width="850">
+  <img src="screenshots/ss_leaderboard.png" width="850" alt="HydroWatch Leaderboard">
 </p>
 
-<h3>Profile</h3>
+Profile
+
 <p align="center">
-  <img src="screenshots/ss_profile.png" width="850">
+  <img src="screenshots/ss_profile.png" width="850" alt="HydroWatch Profile">
 </p>
 
----
+☁️ Deployment
 
-# 🌍 SDG Alignment
+The project is structured for separate frontend and backend deployment.
 
-This project supports **SDG 6 – Clean Water and Sanitation** by promoting community participation, awareness, and reporting of water-related issues.
+Frontend: Vercel
 
----
+Backend: Render
 
-# 🔮 Future Improvements
+Database: MongoDB Atlas
 
-- 📍 Google Maps integration
-- 📸 Image upload with reports
-- 🤖 AI-assisted issue classification
-- 🔔 Notifications
-- 📊 Analytics dashboard
-- 🏅 Achievement badges
-- 🌐 Multi-language support
-- 📱 Progressive Web App (PWA)
-- 👨‍💼 Admin dashboard
+When deploying, configure the backend CORS origin using FRONTEND_URL and configure the frontend API endpoint using VITE_API_URL according to the deployment environment.
 
----
+Current deployment
 
-# 🤝 Contributing
+Frontend: https://hydrowatch-community-portal.vercel.app/
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Push the branch.
-5. Open a Pull Request.
+Backend: https://hydrowatch-backend.onrender.com/
 
----
+Deployment URLs may change as the project is updated.
 
-# 👩‍💻 Author
+🌍 SDG Alignment
 
-**Riya Mishra**
+HydroWatch is conceptually aligned with United Nations Sustainable Development Goal 6 (SDG 6): Clean Water and Sanitation by supporting structured reporting, awareness, community participation and digital management of water-related issues.
 
-B.Tech Computer Science & Engineering
+The application is a software platform; it does not itself perform physical water-infrastructure repair or act as an IoT sensor network.
+
+🔮 Future Scope
+
+The following capabilities can be considered for future versions and are not described as current core functionality:
+
+AI-assisted classification and prioritization of reports
+
+Computer-vision analysis of uploaded evidence images
+
+AI-based duplicate-report detection and report summarization
+
+Predictive analytics for recurring water problems
+
+Real-time IoT/sensor integration
+
+Advanced geospatial heatmaps and risk analysis
+
+Mobile application or Progressive Web App
+
+Push, SMS and email notification integrations
+
+Multilingual interface
+
+Integration with municipal, utility and public-service systems
+
+🔒 Security Notes
+
+Store secrets only in environment variables.
+
+Do not commit .env files.
+
+Use a strong JWT secret of sufficient length.
+
+Keep MongoDB credentials private.
+
+Use backend authorization checks in addition to frontend route protection.
+
+Validate object IDs and user ownership before performing protected operations.
+
+Review SECURITY_NOTES.md before production deployment.
+
+👨‍💻 Project Team
+
+Riya Mishra
+
+B.Tech – Computer Science & Engineering
+
+Roll No.: 2312130100047
 
 GitHub: https://github.com/riyamishra0226
 
----
+Ansh Pandey
 
-## 📜 License
+B.Tech – Computer Science & Engineering
 
-This project is licensed under the **MIT License**.
+Roll No.: 2312130100016
 
-See the [LICENSE](LICENSE) file for more information.
+👨‍🏫 Project Guide
+
+Dr. Kaushal Kishor
+Department of Computer Science & Engineering
+Bharat Ratna Sardar Vallabh Bhai Patel Rajkiya Engineering College Basti
+
+📄 Academic Project Information
+
+Field
+
+Details
+
+Project
+
+HydroWatch – Smart Community Water Management Platform
+
+Programme
+
+B.Tech Computer Science & Engineering
+
+Semester
+
+7th Semester
+
+Academic Session
+
+2026–27
+
+Institution
+
+Bharat Ratna Sardar Vallabh Bhai Patel Rajkiya Engineering College Basti
+
+University
+
+Dr. A.P.J. Abdul Kalam Technical University, U.P., Lucknow
+
+Project Guide
+
+Dr. Kaushal Kishor
+
+Team Members
+
+Riya Mishra, Ansh Pandey
+
+🤝 Contributing
+
+Fork the repository.
+
+Create a feature branch.
+
+Make and test your changes.
+
+Commit the changes with a clear message.
+
+Push the branch.
+
+Open a Pull Request.
+
+For an academic project repository, major architectural or feature changes should also be documented in the relevant project notes.
+
+📜 License
+
+This project is licensed under the MIT License.
+
+See the LICENSE file for details.
+
 <div align="center">
-<br>
 
-### ⭐ If you found this project helpful, please give it a Star!
+HydroWatch
 
-Built with ❤️ using the MERN Stack
+Smart Community Water Management Platform
+
+Built using the MERN stack.
 
 </div>
